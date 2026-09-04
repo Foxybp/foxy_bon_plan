@@ -4,11 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bons plans du moment</title>
+
+<!-- Favicon (onglet navigateur) -->
+<link rel="icon" type="image/png" href="assets/foxy.png">
+
+<!-- Icône écran d'accueil iOS (Safari > Partager > Sur l'écran d'accueil) -->
+<link rel="apple-touch-icon" href="assets/foxy.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bons plans">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Icône écran d'accueil Android/Chrome (via manifest.json) -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#810FF7">
+
 <style>
     body {
         font-family: -apple-system, Helvetica, Arial, sans-serif;
         background: #810FF7;
         margin: 0;
+        padding: 0;
+    }
+    .wrapper {
+        max-width: 480px;
+        margin: 0 auto;
         padding: 16px;
     }
     .site-header { text-align: center; padding: 20px 0 10px; }
@@ -39,13 +58,24 @@
 </style>
 </head>
 <body>
+    <div class="wrapper">
     <div class="site-header">
         <img src="assets/foxy.png" alt="Logo">
         <h1>🦊 Bons plans du moment</h1>
         <p>Tous les deals actifs, mis à jour automatiquement</p>
     </div>
 
-                        <a class="deal-card" href="https://amzn.to/4yoxqMs" target="_blank" rel="nofollow sponsored">
+                        <a class="deal-card" href="https://amzn.to/4qXxRe6" target="_blank" rel="nofollow sponsored">
+                                    <img src="https://m.media-amazon.com/images/I/61VTYoKCaWL._AC_SL1500_.jpg" alt="">
+                                <div class="deal-title">Batterie de Cuisine Poêles et Casseroles Induction Antiadhésive</div>
+                <div class="price-row">
+                    <span class="price-new">59,99 €</span>
+                    <span class="price-old">149,98 €</span>
+                    <span class="badge">-60%</span>
+                </div>
+                <span class="cta">Voir l'offre sur Amazon →</span>
+            </a>
+                    <a class="deal-card" href="https://amzn.to/4yoxqMs" target="_blank" rel="nofollow sponsored">
                                     <img src="https://m.media-amazon.com/images/I/71LePqVOHyL._AC_SL1500_.jpg" alt="">
                                 <div class="deal-title">Casque Conduction Osseuse Natation</div>
                 <div class="price-row">
@@ -66,5 +96,6 @@
                 <span class="cta">Voir l'offre sur Amazon →</span>
             </a>
                 <p class="footer-note">Liens affiliés Amazon — en tant que Partenaire Amazon, je perçois une commission sur les achats éligibles, sans coût supplémentaire pour vous.</p>
-    </body>
+        </div>
+</body>
 </html>
