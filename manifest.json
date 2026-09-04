@@ -1,0 +1,20 @@
+{
+  "name": "Bons plans du moment",
+  "short_name": "Bons plans",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#810FF7",
+  "theme_color": "#810FF7",
+  "icons": [
+    {
+      "src": "assets/foxy.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/foxy.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
