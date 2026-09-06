@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bons plans du moment</title>
 
+<!-- Empêche le cache HTTP de servir une version périmée de la page -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
 <!-- Favicon (onglet navigateur) -->
 <link rel="icon" type="image/png" href="assets/foxy.png">
 
@@ -65,29 +70,9 @@
         <p>Tous les deals actifs, mis à jour automatiquement</p>
     </div>
 
-                        <a class="deal-card" href="https://amzn.to/4hbC1eW" target="_blank" rel="nofollow sponsored">
-                                    <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T1/images/I/717bLl2Tl9L._AC_SL1500_.jpg" alt="">
-                                <div class="deal-title">Videoprojecteur 1080P</div>
-                <div class="price-row">
-                    <span class="price-new">99,99 €</span>
-                    <span class="price-old">259,99 €</span>
-                    <span class="badge">-62%</span>
-                </div>
-                <span class="cta">Voir l'offre sur Amazon →</span>
-            </a>
-                    <a class="deal-card" href="https://amzn.to/4ieZGMO" target="_blank" rel="nofollow sponsored">
-                                    <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T1/images/I/71khpUDT79L._AC_SL1500_.jpg" alt="">
-                                <div class="deal-title">Ordinateur Portable 14 Pouces</div>
-                <div class="price-row">
-                    <span class="price-new">269,99 €</span>
-                    <span class="price-old">899,99 €</span>
-                    <span class="badge">-70%</span>
-                </div>
-                <span class="cta">Voir l'offre sur Amazon →</span>
-            </a>
-                    <a class="deal-card" href="https://amzn.to/4ctMcZI" target="_blank" rel="nofollow sponsored">
+                        <a class="deal-card" href="https://amzn.to/4ctMcZI" target="_blank" rel="nofollow sponsored">
                                     <img src="https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T1/images/I/71fsTVIN8wL._AC_SL1500_.jpg" alt="">
-                                <div class="deal-title">Montre Connectée Femme avec 7 Bracelets</div>
+                                <div class="deal-title">Sèche Cheveux Professionnel</div>
                 <div class="price-row">
                     <span class="price-new">39,99 €</span>
                     <span class="price-old">139,99 €</span>
@@ -97,5 +82,17 @@
             </a>
                 <p class="footer-note">Liens affiliés Amazon — en tant que Partenaire Amazon, je perçois une commission sur les achats éligibles, sans coût supplémentaire pour vous.</p>
         </div>
+    <script>
+        // Les apps ajoutées à l'écran d'accueil (iOS notamment) restaurent
+        // souvent l'état mémorisé au lieu de recharger depuis le réseau.
+        // On force un rechargement à chaque fois que l'app redevient visible
+        // (réouverture depuis l'écran d'accueil, retour au premier plan),
+        // pour garantir d'avoir toujours la dernière version des deals.
+        document.addEventListener('visibilitychange', function () {
+            if (document.visibilityState === 'visible') {
+                location.reload();
+            }
+        });
+    </script>
 </body>
 </html>
